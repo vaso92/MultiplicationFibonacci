@@ -15,18 +15,22 @@ public class FibonacciMultiplicator {
 		}
 		
 		final ArrayList<Long> fibonacciN = FibonacciMultiplicator.getFibonacci(n);
-		ArrayList<Long> table = new ArrayList<Long>();
-		table.add(null);
+		ArrayList<ArrayList<Long>> table = new ArrayList<ArrayList<Long>>();
+		ArrayList<Long> tableRow = new ArrayList<Long>();
+		tableRow.add(null);
 		
 		for (Long i : fibonacciN) {
-			table.add(i);
+			tableRow.add(i);
 		}
+		table.add(tableRow);
 		
-		for (Long row: fibonacciN) {
-			table.add(row);
-			for (Long col: fibonacciN) {
-				table.add(col * row);
+		for (Long x: fibonacciN) {
+			tableRow = new ArrayList<Long>();
+			tableRow.add(x);
+			for (Long y: fibonacciN) {
+				tableRow.add(y * x);
 			}
+			table.add(tableRow);
 		}
 		
 		return new FibonacciMultiplicationTableResult(n, table, ResultStatus.SUCCESS);

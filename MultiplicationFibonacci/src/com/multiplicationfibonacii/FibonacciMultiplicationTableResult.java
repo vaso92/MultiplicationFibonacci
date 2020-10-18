@@ -3,13 +3,13 @@ package com.multiplicationfibonacii;
 import java.util.ArrayList;
 
 public class FibonacciMultiplicationTableResult {
-	enum ResultStatus {
+	public enum ResultStatus {
 		SUCCESS,
 		INVALID_INPUT,
 		INPUT_TOO_LARGE
 	}
 	
-	public FibonacciMultiplicationTableResult(Integer n, ArrayList<Long> table, ResultStatus result) {
+	public FibonacciMultiplicationTableResult(Integer n, ArrayList<ArrayList<Long>> table, ResultStatus result) {
 		this.n = n;
 		this.table = table;
 		this.result = result;
@@ -19,7 +19,7 @@ public class FibonacciMultiplicationTableResult {
 		return n;
 	}
 	
-	public ArrayList<Long> getTable() {
+	public ArrayList<ArrayList<Long>> getTable() {
 		return table;
 	}
 	
@@ -28,6 +28,6 @@ public class FibonacciMultiplicationTableResult {
 	}
 
 	private Integer n;
-	private ArrayList<Long> table;
+	private ArrayList<ArrayList<Long>> table;
 	private ResultStatus result;
 }

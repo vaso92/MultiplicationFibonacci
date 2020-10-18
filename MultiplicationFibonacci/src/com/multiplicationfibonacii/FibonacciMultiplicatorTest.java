@@ -45,13 +45,13 @@ class FibonacciMultiplicatorTest {
 	void testSuccessfulMultiplicationFibonacciTable4() {
 		FibonacciMultiplicationTableResult result = multiplicator.getFibonacciMultiplicationTable(4);
 				
-		final ArrayList<Long> expected = new ArrayList<Long>() {
+		final ArrayList<ArrayList<Long>> expected = new ArrayList<ArrayList<Long>>() {
 			{ 
-            	add(null); add(0L); add(1L); add(1L); add(2L);
-            	add(0L); add(0L); add(0L); add(0L); add(0L);
-            	add(1L); add(0L); add(1L); add(1L); add(2L);
-            	add(1L); add(0L); add(1L); add(1L); add(2L);
-            	add(2L); add(0L); add(2L); add(2L); add(4L);
+            	add(new ArrayList<Long>() {{ add(null); add(0L); add(1L); add(1L); add(2L); }});
+            	add(new ArrayList<Long>() {{ add(0L); add(0L); add(0L); add(0L); add(0L); }});
+            	add(new ArrayList<Long>() {{ add(1L); add(0L); add(1L); add(1L); add(2L); }});
+            	add(new ArrayList<Long>() {{ add(1L); add(0L); add(1L); add(1L); add(2L); }});
+            	add(new ArrayList<Long>() {{ add(2L); add(0L); add(2L); add(2L); add(4L); }});
             } 
 		};
 		
@@ -63,14 +63,14 @@ class FibonacciMultiplicatorTest {
 	void testSuccessfulMultiplicationFibonacciTable5() {
 		FibonacciMultiplicationTableResult result = multiplicator.getFibonacciMultiplicationTable(5);
 		
-		final ArrayList<Long> expected = new ArrayList<Long>() {
+		final ArrayList<ArrayList<Long>> expected = new ArrayList<ArrayList<Long>>() {
 			{ 
-            	add(null); add(0L); add(1L); add(1L); add(2L); add(3L);
-            	add(0L); add(0L); add(0L); add(0L); add(0L); add(0L);
-            	add(1L); add(0L); add(1L); add(1L); add(2L); add(3L);
-            	add(1L); add(0L); add(1L); add(1L); add(2L); add(3L);
-            	add(2L); add(0L); add(2L); add(2L); add(4L); add(6L);
-            	add(3L); add(0L); add(3L); add(3L); add(6L); add(9L);
+				add(new ArrayList<Long>() {{ add(null); add(0L); add(1L); add(1L); add(2L); add(3L); }});
+            	add(new ArrayList<Long>() {{ add(0L); add(0L); add(0L); add(0L); add(0L); add(0L); }});
+            	add(new ArrayList<Long>() {{ add(1L); add(0L); add(1L); add(1L); add(2L); add(3L); }});
+            	add(new ArrayList<Long>() {{ add(1L); add(0L); add(1L); add(1L); add(2L); add(3L); }});
+            	add(new ArrayList<Long>() {{ add(2L); add(0L); add(2L); add(2L); add(4L); add(6L); }});
+            	add(new ArrayList<Long>() {{ add(3L); add(0L); add(3L); add(3L); add(6L); add(9L); }});
             } 
 		};
 		
