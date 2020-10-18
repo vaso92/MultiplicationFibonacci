@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import com.multiplicationfibonacii.FibonacciMultiplicationTableResult.ResultStatus;
 
 public class FibonacciMultiplicator {
-	FibonacciMultiplicationTableResult getFibonacciMultiplicationTable(Integer n) {
+	public FibonacciMultiplicationTableResult getFibonacciMultiplicationTable(Integer n) {
 		if (n <= 0) {
 			return new FibonacciMultiplicationTableResult(n, null, ResultStatus.INVALID_INPUT);
 		}
